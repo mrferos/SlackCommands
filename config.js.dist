@@ -1,9 +1,11 @@
 var config = {}
 
+// You can get an API key here: http://useragentapi.com/
+config.useragentapi = {key:'[CHANGE ME]'};
 config.slack = {
-	command: {
-		token: 'foo'
+	ualookup: {
+		token: '[CHANGE ME]'
 	}
-}
+};
 
 module.exports = config;
