@@ -11,13 +11,17 @@ And fill in the values indiciated by [CHANGEME]
 
 ## Commands
 
-### /ualookup
+### /ualookup <user-agent-string>
 
-*Example Usage:* 
+**Example Usage:**
+```
 /ualookup Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; .NET CLR 1.1.4309)
-*Example Response:*
+```
+**Example Response:**
+```
 OS: Windows XP
 Device Type: Desktop
 OS Version: Windows NT 5.1
 Browser Name: Internet Explorer
 Browser Version: 6.0
+```
