@@ -19,10 +19,15 @@ router.post('/ualookup', function(req, res, next) {
 
   		response.on('end', function () {
     			uaData = JSON.parse(str);
-			message = "OS: " + uaData.platform_name + "\nDevice Type: ";
-			message += uaData.platform_type + "\nOS Version: " + uaData.platform_version;
-			message += "\nBrowser Name: " + uaData.browser_name;
-			message += "\nBrowser Version: " + uaData.browser_version;
+			if (uaData.platform_name == undefined) {
+				message = "Unknown User Agent String";
+			} else {
+				message = "OS: " + uaData.platform_name + "\nDevice Type: ";
+				message += uaData.platform_type + "\nOS Version: " + uaData.platform_version;
+				message += "\nBrowser Name: " + uaData.browser_name;
+				message += "\nBrowser Version: " + uaData.browser_version;
+			}
+	
 			res.send(message);
   		});
 	};
