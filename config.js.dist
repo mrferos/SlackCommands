@@ -1,0 +1,9 @@
+var config = {}
+
+config.slack = {
+	command: {
+		token: 'foo'
+	}
+}
+
+module.exports = config;
